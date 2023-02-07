@@ -71,11 +71,14 @@ function generateOutput() {
     // With any input: Make a character uppercase, if it follows a space or a hyphen
     result = "";
     Array.from(input).forEach((letter, i) => {
-      if (input[1 - 1] == " " || input[i - 1] === "-") {
-        outputField.value = result += input[i].toUpperCase();
+      if (input[i - 1] == " " || input[i - 1] === "-") {
+        result += input[i].toUpperCase();
+        outputField.value = result;
       } else {
-        outputField.value = result += input[i];
+        result += input[i];
+        outputField.value = result;
       }
+
     });
     console.log(result);
   }

@@ -56,16 +56,45 @@
 
 // ---------------- Name parts exercise ------------------
 
-const fullName = "Peter Heronimous Lind";
-let firstName;
-let middleName;
-let lastName;
+// const fullName = "Peter Heronimous Lind";
+// let firstName;
+// let middleName;
+// let lastName;
 
-firstName = fullName.substring(0, fullName.indexOf(" "));
-middleName = fullName.substring(fullName.indexOf(" "), fullName.lastIndexOf(" "));
-lastName = fullName.substring(fullName.lastIndexOf(" "));
+// firstName = fullName.substring(0, fullName.indexOf(" "));
+// middleName = fullName.substring(fullName.indexOf(" "), fullName.lastIndexOf(" "));
+// lastName = fullName.substring(fullName.lastIndexOf(" "));
 
-console.log(firstName + middleName + lastName);
+// console.log(firstName + middleName + lastName);
 
+// ---------------- first letter caps exercise ------------------
 
-// ---------------- Name parts exercise ------------------
+// let firstName = "felicia";
+
+// firstName = firstName.charAt(0).toLowerCase() + firstName.substring(1).toUpperCase();
+
+// console.log(firstName);
+
+// ---------------- 3caPitalization parts exercise ------------------
+
+// init loop
+
+let iterator = 0;
+let maxNumberOfIterations;
+initLoop();
+function initLoop() {
+  console.log("initloop");
+  maxNumberOfIterations = 11;
+  loop();
+}
+
+function loop() {
+  console.log("loop");
+
+  // this adds 1
+  iterator++;
+  if (iterator < maxNumberOfIterations) {
+    // this calls its self again with a random delay
+    setTimeout(loop, Math.random() * 1000);
+  }
+}
