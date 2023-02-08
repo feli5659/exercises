@@ -77,24 +77,92 @@
 
 // ---------------- 3caPitalization parts exercise ------------------
 
-// init loop
+// ------------------  init loop   ----------------------
 
-let iterator = 0;
-let maxNumberOfIterations;
+// let iterator = 0;
+// let maxNumberOfIterations;
+// initLoop();
+// function initLoop() {
+//   console.log("initloop");
+//   maxNumberOfIterations = 11;
+//   loop();
+// }
+
+// function loop() {
+//   console.log("loop");
+
+//   // this adds 1
+//   iterator++;
+//   if (iterator < maxNumberOfIterations) {
+//     // this calls its self again with a random delay
+//     setTimeout(loop, Math.random() * 1000);
+//   }
+// }
+
+// ------------------ Array's -------------------- //
+
+// const people = ["Harry", "Ron", "Hermione"];
+// let result;
+
+// // push() adds to end of array
+// result = people.push("Draco");
+// // pop() removes from end of array and returns it
+// result = people.pop();
+
+// result = people.push("Neville");
+// result = people.push("Luna");
+// // slice() creates new array - in this case with first 3 items
+// result = people.slice(0, 3);
+// // splice() inserts new item in between the 2 items specified
+// result = people.splice(1, 0, "Cho");
+// // this inserts new item on the specified place
+// people[1] = "Ginny";
+// result = people.push("Fred", "George");
+// // indexOf finds where in the array the item specified is
+// result = people.indexOf("Fred");
+// shift() removes from the beginning and returns it
+// result = people.shift()
+// unshift(...items) adds items to the beginning
+// result = poeple.unshift(1)
+
+// console.log(result);
+// console.log(people);
+
+// const str = "abcdefghijklmn";
+// const arr1 = str.split();
+// const arr2 = Array.from(str);
+
+// // turns full string into array
+// console.log(arr1);
+
+// // seperates every character to 1 item in an array
+// console.log(arr2);
+
+// ----------------------- counting array ----------------- //
+const arr = [];
+let counter = 0;
+
 initLoop();
+
 function initLoop() {
-  console.log("initloop");
-  maxNumberOfIterations = 11;
   loop();
 }
 
 function loop() {
-  console.log("loop");
+  if (counter <= 8) {
+    // adds 1
+    counter++;
 
-  // this adds 1
-  iterator++;
-  if (iterator < maxNumberOfIterations) {
-    // this calls its self again with a random delay
-    setTimeout(loop, Math.random() * 1000);
+    // unshift(...items) adds items to the beginning
+    arr.unshift(counter);
+    // calls loop with time delay of 1000 ms
+    setTimeout(loop, 1000);
+    console.log(arr);
+  } else if (counter > 8) {
+    counter++;
+    arr.unshift(counter);
+    arr.pop();
+    setTimeout(loop, 1000);
+    console.log(arr);
   }
 }
