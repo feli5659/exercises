@@ -120,10 +120,10 @@
 // result = people.push("Fred", "George");
 // // indexOf finds where in the array the item specified is
 // result = people.indexOf("Fred");
-// shift() removes from the beginning and returns it
-// result = people.shift()
-// unshift(...items) adds items to the beginning
-// result = poeple.unshift(1)
+// // shift() removes from the beginning and returns it
+// result = people.shift();
+// // unshift(...items) adds items to the beginning
+// result = people.unshift();
 
 // console.log(result);
 // console.log(people);
@@ -139,30 +139,60 @@
 // console.log(arr2);
 
 // ----------------------- counting array ----------------- //
-const arr = [];
-let counter = 0;
+// const arr = [];
+// let counter = 0;
 
-initLoop();
+// initLoop();
 
-function initLoop() {
-  loop();
-}
+// function initLoop() {
+//   loop();
+// }
 
-function loop() {
-  if (counter <= 8) {
-    // adds 1
-    counter++;
+// function loop() {
+//   if (counter <= 8) {
+//     // adds 1
+//     counter++;
 
-    // unshift(...items) adds items to the beginning
-    arr.unshift(counter);
-    // calls loop with time delay of 1000 ms
-    setTimeout(loop, 1000);
-    console.log(arr);
-  } else if (counter > 8) {
-    counter++;
-    arr.unshift(counter);
-    arr.pop();
-    setTimeout(loop, 1000);
-    console.log(arr);
+//     // unshift(...items) adds items to the beginning
+//     arr.unshift(counter);
+//     // calls loop with time delay of 1000 ms
+//     setTimeout(loop, 1000);
+//     console.log(arr);
+//   } else if (counter > 8) {
+//     counter++;
+//     arr.unshift(counter);
+//     arr.pop();
+//     setTimeout(loop, 1000);
+//     console.log(arr);
+//   }
+// }
+
+// ---------------------  Loops -------------------
+
+// from 0 - 9
+// for (let counter = 0; counter < 10; counter++) {
+//   console.log(counter);
+// }
+
+// from 1 to 10
+// for (let counter = 1; counter < 11; counter++) {
+//   console.log(counter);
+// }
+// from 10 to 0 and a consolelog after 0 that saysf liftof
+for (let counter = 10; counter >= -1; counter--) {
+  if (counter < 0) {
+    console.log("liftoff");
+  } else {
+    console.log(counter);
   }
 }
+// from 1 to 19 but only counts odd numbers (not sure how to only count odd numbers without if statement)
+// for (let counter = 1; counter < 20; counter++) {
+//   console.log(counter);
+// }
+
+// from 1 to 16777216, but doubling each time (2,4,8,16...)
+
+// for (let counter = 1; counter < 16777216; counter++ * 2) {
+//   console.log(counter);
+// }
