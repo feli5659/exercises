@@ -167,3 +167,13 @@
 //   }
 // }
 
+let person1 = { firstName: "Peter", age: 43, student: false };
+
+console.log(person1.lastName);
+
+person1.lastname = undefined;
+
+console.log("person1.lastName", person1.lastName);
+console.log("person1.middleName", person1.middleName);
+
+console.log(person1);

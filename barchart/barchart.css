@@ -1,0 +1,23 @@
+#bars {
+  display: flex;
+  height: 100px;
+  align-items: flex-end;
+}
+
+.bar {
+  flex-grow: 1;
+  border: 1px solid pink;
+  background-color: black;
+  margin-right: 1px;
+  animation: move 1s linear infinite;
+  height: 100%;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
